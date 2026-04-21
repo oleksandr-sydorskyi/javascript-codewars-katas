@@ -5,7 +5,7 @@ function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
 
 // Make Negative
 function makeNegative(num) {
-  return num > 0 ? -num : num;
+  return num <= 0 ? num : -num;
 }
 
 // Game Move
@@ -14,8 +14,8 @@ function move(position, roll) {
 }
 
 // Personalized Message
-function greet(name, owner) {
-  return name === owner ? 'Hello boss' : 'Hello guest';
+function greet (name, owner) {
+  return `Hello ${name === owner ? 'boss' : 'guest'}`;
 }
 
 // Keep Hydrated

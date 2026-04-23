@@ -89,3 +89,62 @@ function past(h, m, s) {
 function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0;
 }
+
+// Geometry Basics: Circle Circumference in 2D
+function circleCircumference(circle) {
+  return 2 * Math.PI * circle.radius;
+}
+
+//Training JS #12: loop statement --for..in and for..of
+function giveMeFive(obj) {
+  let result = [];
+  for (let key in obj) {
+    if (key.length === 5) {
+      result.push(key);
+    }
+    const value = obj[key];
+    if (value.length === 5) {
+      result.push(value);
+    }
+  }
+  return result;
+}
+
+//nderstanding closures - the basics
+function buildFun(n) {
+  let res = [];
+  for (let i = 0; i < n; i++) {
+    res.push(function () {
+      return i;
+    });
+  }
+  return res;
+}
+
+//Fun with ES6 Classes #2 - Animals and Inheritance
+class Shark extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 0, "shark", status);
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 4, "cat", status);
+  }
+
+  introduce() {
+    return `${super.introduce()}  Meow meow!`;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, status, master) {
+    super(name, age, 4, "dog", status);
+    this.master = master;
+  }
+
+  greetMaster() {
+    return `Hello ${this.master}`;
+  }
+}
